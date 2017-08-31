@@ -1,4 +1,4 @@
-var NEWS_URLS = ["", "", "", "", ""]
+var NEWS_URLS = ["www.washingtonpost.com", "www.foxnews.com", "", "", ""]
 
 
 window.onload=CheckUrl
@@ -11,8 +11,16 @@ function CheckUrl(){
 	//var url = protocol + '//' + host;
 	console.log(baseurl)
 
-
+	if (NEWS_URLS.indexOf(baseurl) > -1){
+		popitup("popup.html")
+	}
 
 	//CHECK IF URL IS IN OUR LIST OF HARD CODED SOURCES
 	//IF IT IS, THEN LAUNCH THE POPUP.
+}
+
+function popitup(url) {
+	newwindow=window.open(url,'name','height=200,width=150');
+	if (window.focus) {newwindow.focus()}
+	return false;
 }
