@@ -1,0 +1,17 @@
+{
+  "manifest_version": 2,
+  "name": "Shoot the Parot",
+  "description": "Our extension gives interested users the opportunity to explore view points opposite their own.",
+  "version": "1.0",
+  "content_scripts": [ {"matches": ["https://*/*", "http://*/*"], "css": ["main.css"], "js": ["parrot.js"], "run_at": "document_end", "all_frames": true} ],
+  "browser_action": {
+   "default_popup": "popup.html"
+  },
+  "permissions": [
+   "https://*/",
+   "activeTab",
+   "tabs",
+   "storage"
+  ]
+}
+

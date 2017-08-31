@@ -1,0 +1,7 @@
+#popup-body {
+    display: flex;
+    justify-content: center;
+    font-size: 10pt;
+    height:400px;
+    width:400px;
+}
