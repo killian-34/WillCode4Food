@@ -1,4 +1,5 @@
 from cloudant import Cloudant
+import newspaper
 from flask import Flask, render_template, request, jsonify
 import atexit
 import cf_deployment_tracker
@@ -56,6 +57,10 @@ def get_visitor():
     else:
         print('No database')
         return jsonify([])
+
+@app.route('/api/summary/<url>', methods=['GET'])
+def get_summary(url):
+    return 'summary'
 
 # /**
 #  * Endpoint to get a JSON array of all the visitors in the database
