@@ -9,8 +9,8 @@ function CheckUrl(){
 	//var protocol = pathArray[0];
 	var baseurl = pathArray[2];
 	//var url = protocol + '//' + host;
-	console.log(baseurl)
-
+	console.log(baseurl);
+    console.log(NEWS_URLS.indexOf(baseurl));
 	if (NEWS_URLS.indexOf(baseurl) > -1){
 		popitup("popup.html")
 	}
@@ -20,7 +20,8 @@ function CheckUrl(){
 }
 
 function popitup(url) {
-	newwindow=window.open(url,'name','height=200,width=150');
-	if (window.focus) {newwindow.focus()}
+	// newwindow=window.open(url,'name','height=200,width=150');
+	// if (window.focus) {newwindow.focus()}
+    chrome.runtime.sendMessage({ "newIconPath" : "img/ShootTheParrotLogo2_128.png" });
 	return false;
 }
