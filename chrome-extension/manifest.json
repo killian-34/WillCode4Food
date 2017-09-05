@@ -4,6 +4,7 @@
   "description": "Our extension gives interested users the opportunity to explore view points opposite their own.",
   "version": "1.0",
   "content_scripts": [ {"matches": ["https://*/*", "http://*/*"], "css": ["main.css"], "js": ["parrot.js"], "run_at": "document_end", "all_frames": true} ],
+  "background": { "scripts": ["background.js"] },
   "browser_action": {
    "default_popup": "popup.html"
   },
@@ -13,8 +14,7 @@
    "tabs",
    "storage"
   ],
-  "icons":{ "32": "img/ShootTheParrotLogo_32.png",
-           "64": "img/ShootTheParrotLogo_64.png",
-          "128": "img/ShootTheParrotLogo_128.png" }
+  "icons":{ "32": "img/logocolor_32.png",
+           "64": "img/logocolor_64.png",
+          "128": "img/logocolor_128.png" }
 }
-
