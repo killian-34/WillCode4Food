@@ -12,7 +12,7 @@ function CheckUrl(){
 	console.log(baseurl)
 
 	if (NEWS_URLS.indexOf(baseurl) > -1){
-		popitup("popup.html")
+		//popitup("popup.html")
 	}
 
 	//CHECK IF URL IS IN OUR LIST OF HARD CODED SOURCES
